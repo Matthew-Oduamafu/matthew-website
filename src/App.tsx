@@ -1,7 +1,4 @@
-'use client';
-
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import {
   Menu, X, Mail, Phone, ArrowRight, GraduationCap, Rocket,
   Cpu, Laptop, Briefcase, Calendar, MapPin,
@@ -12,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 
-export default function Home() {
+export default function App() {
   const [isOpen, setIsOpen] = useState(false);
 
   // Force light theme
@@ -57,7 +54,6 @@ export default function Home() {
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
-
           </nav>
 
           {/* Mobile Navigation Toggle */}
@@ -149,13 +145,10 @@ export default function Home() {
 
                 {/* Portrait Wrapper */}
                 <div className="w-full h-full rounded-[30px] overflow-hidden border-2 border-border shadow-2xl relative z-10 bg-muted">
-                  <Image
+                  <img
                     src="/img/IMG_2561 copy.JPG"
                     alt="Matthew Oduamafu"
-                    fill
-                    priority
-                    className="object-cover hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 768px) 100vw, 420px"
+                    className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
 
@@ -612,7 +605,7 @@ export default function Home() {
             &copy; 2025 Matthew Emmanuel Oduamafu. Engineering the future, one innovation at a time.
           </p>
           <p className="text-xs text-muted-foreground/80">
-            Built with Next.js, React, TypeScript, Tailwind CSS, and Shadcn UI.
+            Built with Vite, React, TypeScript, Tailwind CSS, and Shadcn UI.
           </p>
         </div>
       </footer>
