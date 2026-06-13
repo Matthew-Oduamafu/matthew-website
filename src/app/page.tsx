@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { 
-  Menu, X, Mail, Phone, ArrowRight, GraduationCap, Rocket, 
-  Cpu, Laptop, Briefcase, Calendar, MapPin, 
+import {
+  Menu, X, Mail, Phone, ArrowRight, GraduationCap, Rocket,
+  Cpu, Laptop, Briefcase, Calendar, MapPin,
   Droplet, Sprout, Wind, Hammer
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -93,7 +93,7 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 py-12 relative z-10 space-y-32">
-        
+
         {/* Hero Section */}
         <section className="min-h-[calc(100vh-80px)] flex items-center py-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
@@ -146,13 +146,13 @@ export default function Home() {
               <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-[30px] overflow-visible">
                 {/* Background Gradient Pulse */}
                 <div className="absolute -inset-4 bg-gradient-to-tr from-primary to-emerald-500 rounded-[34px] opacity-20 blur-xl animate-pulse-slow -z-10" />
-                
+
                 {/* Portrait Wrapper */}
                 <div className="w-full h-full rounded-[30px] overflow-hidden border-2 border-border shadow-2xl relative z-10 bg-muted">
-                  <Image 
-                    src="/img/IMG_2561 copy.JPG" 
-                    alt="Matthew Oduamafu" 
-                    fill 
+                  <Image
+                    src="/img/IMG_2561 copy.JPG"
+                    alt="Matthew Oduamafu"
+                    fill
                     priority
                     className="object-cover hover:scale-105 transition-transform duration-700"
                     sizes="(max-width: 768px) 100vw, 420px"
@@ -264,7 +264,7 @@ export default function Home() {
             {/* Timeline Item 1 */}
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-background border-4 border-primary group-hover:border-emerald-500 transition-colors duration-300 z-10" />
-              
+
               <div className="space-y-2 p-6 rounded-2xl bg-gradient-to-br from-indigo-500/[0.03] to-emerald-500/[0.01] border border-border/40 hover:border-primary/40 transition-all duration-300">
                 <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
                   <span className="font-extrabold text-primary flex items-center gap-1.5">
@@ -285,7 +285,7 @@ export default function Home() {
             {/* Timeline Item 2 */}
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-background border-4 border-primary group-hover:border-emerald-500 transition-colors duration-300 z-10" />
-              
+
               <div className="space-y-2 p-6 rounded-2xl bg-gradient-to-br from-indigo-500/[0.03] to-emerald-500/[0.01] border border-border/40 hover:border-primary/40 transition-all duration-300">
                 <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
                   <span className="font-extrabold text-primary flex items-center gap-1.5">
@@ -306,7 +306,7 @@ export default function Home() {
             {/* Timeline Item 3 */}
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-background border-4 border-primary group-hover:border-emerald-500 transition-colors duration-300 z-10" />
-              
+
               <div className="space-y-2 p-6 rounded-2xl bg-gradient-to-br from-indigo-500/[0.03] to-emerald-500/[0.01] border border-border/40 hover:border-primary/40 transition-all duration-300">
                 <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
                   <span className="font-extrabold text-primary flex items-center gap-1.5">
@@ -327,7 +327,7 @@ export default function Home() {
             {/* Timeline Item 4 */}
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-background border-4 border-primary group-hover:border-emerald-500 transition-colors duration-300 z-10" />
-              
+
               <div className="space-y-2 p-6 rounded-2xl bg-gradient-to-br from-indigo-500/[0.03] to-emerald-500/[0.01] border border-border/40 hover:border-primary/40 transition-all duration-300">
                 <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
                   <span className="font-extrabold text-primary flex items-center gap-1.5">
@@ -340,7 +340,7 @@ export default function Home() {
                 <h3 className="text-xl sm:text-2xl font-bold">Software Developer</h3>
                 <h4 className="text-sm font-semibold text-muted-foreground">Innorik Ghana Ltd</h4>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  Collaborated with 10-member team enhancing US-based ERP system using C# and .NET. Applied N-TIER and SOLID principles to improve software reliability and scalability.
+                  Collaborated with 10 - member team enhancing US-based ERP system using C# and .NET. Applied N-TIER and SOLID principles to improve software reliability and scalability.
                 </p>
               </div>
             </div>
@@ -363,7 +363,7 @@ export default function Home() {
             {/* Education Item 1 */}
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-background border-4 border-primary group-hover:border-emerald-500 transition-colors duration-300 z-10" />
-              
+
               <div className="space-y-2 p-6 rounded-2xl bg-gradient-to-br from-indigo-500/[0.03] to-emerald-500/[0.01] border border-border/40 hover:border-primary/40 transition-all duration-300">
                 <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
                   <span className="font-extrabold text-primary flex items-center gap-1.5">
@@ -384,7 +384,7 @@ export default function Home() {
             {/* Education Item 2 */}
             <div className="relative group">
               <div className="absolute -left-[31px] sm:-left-[47px] top-1.5 w-5 h-5 rounded-full bg-background border-4 border-primary group-hover:border-emerald-500 transition-colors duration-300 z-10" />
-              
+
               <div className="space-y-2 p-6 rounded-2xl bg-gradient-to-br from-indigo-500/[0.03] to-emerald-500/[0.01] border border-border/40 hover:border-primary/40 transition-all duration-300">
                 <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
                   <span className="font-extrabold text-primary flex items-center gap-1.5">
@@ -453,7 +453,7 @@ export default function Home() {
 
             {/* Product Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              
+
               {/* Product 1 */}
               <Card className="border-border bg-background hover:border-primary transition-all duration-300 hover:scale-[1.02] shadow-sm rounded-2xl flex flex-col justify-between">
                 <CardHeader className="space-y-2">
@@ -569,7 +569,7 @@ export default function Home() {
               <Mail className="h-5 w-5 text-primary group-hover:text-white transition-colors" />
               <span>matthew.oduamafu@ashesi.edu.gh</span>
             </a>
-            
+
             <a
               href="mailto:matthewoduamafu@gmail.com"
               className="w-full sm:w-auto flex items-center justify-center gap-3 px-6 py-4 rounded-full bg-card hover:bg-primary hover:text-white border border-border hover:border-primary shadow-sm hover:shadow-lg transition-all duration-300 font-medium group hover:-translate-y-1 text-sm sm:text-base text-center"
@@ -591,13 +591,13 @@ export default function Home() {
           <div className="flex justify-center items-center gap-6 pt-4 border-t border-border/40 max-w-md mx-auto">
             <Button render={<a href="https://www.linkedin.com/in/matthew-oduamafu/" target="_blank" rel="noopener noreferrer" />} variant="outline" className="rounded-full px-6 gap-2 border-border/80 hover:bg-muted font-bold">
               <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24" role="img" focusable="false">
-                <path d="M5.5 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM4 9h3v11H4V9Zm5 0h2.88v1.5h.04c.4-.75 1.38-1.54 2.85-1.54 3.05 0 3.61 2 3.61 4.6V20h-3v-5.27c0-1.26-.02-2.88-1.75-2.88-1.76 0-2.03 1.38-2.03 2.79V20H9V9Z"/>
+                <path d="M5.5 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM4 9h3v11H4V9Zm5 0h2.88v1.5h.04c.4-.75 1.38-1.54 2.85-1.54 3.05 0 3.61 2 3.61 4.6V20h-3v-5.27c0-1.26-.02-2.88-1.75-2.88-1.76 0-2.03 1.38-2.03 2.79V20H9V9Z" />
               </svg>
               LinkedIn
             </Button>
             <Button render={<a href="https://github.com/Matthew-Oduamafu" target="_blank" rel="noopener noreferrer" />} variant="outline" className="rounded-full px-6 gap-2 border-border/80 hover:bg-muted font-bold">
               <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24" role="img" focusable="false">
-                <path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.5 2.87 8.32 6.84 9.66.5.1.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.21-3.37-1.21-.45-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.74 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.3c.85 0 1.7.12 2.5.35 1.9-1.33 2.74-1.05 2.74-1.05.55 1.43.2 2.48.1 2.74.64.72 1.03 1.63 1.03 2.75 0 3.95-2.33 4.82-4.56 5.07.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.6.69.49A10.19 10.19 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/>
+                <path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.5 2.87 8.32 6.84 9.66.5.1.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.21-3.37-1.21-.45-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.08 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.74 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.3c.85 0 1.7.12 2.5.35 1.9-1.33 2.74-1.05 2.74-1.05.55 1.43.2 2.48.1 2.74.64.72 1.03 1.63 1.03 2.75 0 3.95-2.33 4.82-4.56 5.07.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.6.69.49A10.19 10.19 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z" />
               </svg>
               GitHub
             </Button>
