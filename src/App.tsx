@@ -25,6 +25,47 @@ export default function App() {
     { label: 'Contact', href: '#contact' },
   ];
 
+  const skills = [
+    { name: 'C', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg' },
+    { name: 'C++', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg' },
+    { name: 'MATLAB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg' },
+    { name: 'Simulink', logo: 'custom-simulink' },
+    { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
+    { name: 'Machine Learning', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg' },
+    { name: 'Deep Learning', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg' },
+    { name: 'CMake', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cmake/cmake-original.svg' },
+    { name: 'Makefile', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg' },
+    { name: 'KiCad', logo: 'https://cdn.simpleicons.org/kicad' },
+    { name: 'EasyEDA', logo: 'https://cdn.simpleicons.org/easyeda/00A4E4' },
+    { name: 'Fusion 360', logo: 'https://cdn.simpleicons.org/autodesk/FF8200' },
+    { name: 'Java', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' },
+    { name: 'Spring Boot', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg' },
+    { name: 'Flutter', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg' },
+    { name: 'PostgreSQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg' },
+    { name: 'Redis', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg' },
+    { name: 'Elasticsearch', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg' },
+    { name: 'Kibana', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kibana/kibana-original.svg' },
+    { name: 'Kafka', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg' },
+    { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
+    { name: 'Azure', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg' },
+    { name: 'AWS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
+    { name: 'GCP', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg' }
+  ];
+
+  const renderLogo = (logo: string) => {
+    if (logo === 'custom-simulink') {
+      return (
+        <svg className="w-5 h-5 text-[#E05B2B] shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="8" width="6" height="8" rx="1.5" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity="0.1" />
+          <rect x="16" y="8" width="6" height="8" rx="1.5" stroke="currentColor" strokeWidth="2" fill="currentColor" fillOpacity="0.2" />
+          <path d="M8 12H16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          <path d="M13 9L16 12L13 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+    }
+    return <img src={logo} alt="" className="w-5 h-5 object-contain shrink-0" />;
+  };
+
   return (
     <div className="relative min-h-screen bg-background text-foreground transition-colors duration-300 antialiased selection:bg-primary selection:text-white">
       {/* Background Shapes */}
@@ -91,7 +132,7 @@ export default function App() {
       <main className="max-w-7xl mx-auto px-6 py-12 relative z-10 space-y-32">
 
         {/* Hero Section */}
-        <section className="min-h-[calc(100vh-80px)] flex items-center py-12">
+        <section className="min-h-[calc(100vh-80px)] flex flex-col justify-center py-12 gap-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-8 animate-slide-in-left">
@@ -169,6 +210,46 @@ export default function App() {
                     <div className="text-sm font-bold text-emerald-500">Verdiq Ltd</div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Horizontally moving skills marquee */}
+          <div className="w-full pt-8 border-t border-border/40 space-y-4">
+            <h3 className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-muted-foreground/80">
+              Skills & Tools
+            </h3>
+            
+            <div className="relative w-full overflow-hidden py-1.5">
+              {/* Left and Right Gradient Masks */}
+              <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+              
+              <div className="animate-marquee flex gap-6 items-center">
+                {/* First set of skills */}
+                {skills.map((skill, index) => (
+                  <div
+                    key={`skill-1-${index}`}
+                    className="flex items-center gap-3 px-5 py-2.5 bg-card/40 backdrop-blur-sm hover:bg-card border border-border/40 hover:border-primary/30 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md cursor-default shrink-0"
+                  >
+                    {renderLogo(skill.logo)}
+                    <span className="font-bold text-sm tracking-wide text-foreground/85">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
+                {/* Duplicate set for seamless looping */}
+                {skills.map((skill, index) => (
+                  <div
+                    key={`skill-2-${index}`}
+                    className="flex items-center gap-3 px-5 py-2.5 bg-card/40 backdrop-blur-sm hover:bg-card border border-border/40 hover:border-primary/30 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md cursor-default shrink-0"
+                  >
+                    {renderLogo(skill.logo)}
+                    <span className="font-bold text-sm tracking-wide text-foreground/85">
+                      {skill.name}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
