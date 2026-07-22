@@ -144,7 +144,7 @@ export default function App() {
                 Through Technology
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground font-medium border-l-4 border-emerald-500 pl-4">
-                MSc Mechatronics Engineer | Software Architect | Agritech CEO
+                MSc Mechatronics Engineer | Software Engineer | Agritech CEO
               </p>
               <p className="text-base sm:text-lg text-muted-foreground/90 max-w-2xl leading-relaxed">
                 I'm Matthew Oduamafu, bridging cutting-edge robotics and software engineering to solve real-world agricultural challenges across Africa.
@@ -219,12 +219,12 @@ export default function App() {
             <h3 className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-muted-foreground/80">
               Skills & Tools
             </h3>
-            
+
             <div className="relative w-full overflow-hidden py-1.5">
               {/* Left and Right Gradient Masks */}
               <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
               <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-              
+
               <div className="animate-marquee flex gap-6 items-center">
                 {/* First set of skills */}
                 {skills.map((skill, index) => (
@@ -280,7 +280,7 @@ export default function App() {
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                   Pursuing MSc at Ashesi University with focus on AI-driven embedded systems, autonomous robotics, and precision agriculture.
-                  Expertise in STM32 microcontrollers, NVIDIA Jetson AI platforms, IoT sensor networks, and real-time control systems for agricultural automation.
+                  Expertise in STM32 microcontrollers, STM32 MPU AI platforms, IoT sensor networks, and real-time control systems for agricultural automation.
                 </p>
               </CardContent>
             </Card>
