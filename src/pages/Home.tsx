@@ -355,7 +355,7 @@ export default function Home() {
               </h1>
 
               <p className="text-base sm:text-lg font-semibold text-muted-foreground border-l-4 border-emerald-500 pl-4 leading-relaxed">
-                MSc Mechatronics Researcher · Software &amp; Hardware Engineer
+                MSc Mechatronics Engineer · Software &amp; Hardware Engineer
                 <br className="hidden sm:block" />
                 <span className="sm:hidden"> · </span>Founder &amp; CEO, Verdiq Ltd
               </p>
@@ -364,7 +364,7 @@ export default function Home() {
                 I&rsquo;m Matthew Oduamafu. I design the boards, write the firmware that runs on them,
                 and build the backend services they talk to. Four years shipping production software
                 across e-commerce and enterprise systems, now aimed at embedded intelligence &mdash; as
-                an MSc Mechatronics researcher at Ashesi University, and as founder of a hardware
+                an MSc Mechatronics Engineer at Ashesi University, and as founder of a hardware
                 company building for African farmers.
               </p>
 
