@@ -338,7 +338,7 @@ export default function Home() {
         {/* ---------------------------------------------------------- HERO */}
         <section className="min-h-[calc(100vh-80px)] flex flex-col justify-center py-8 gap-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center w-full">
-            <div className="lg:col-span-7 space-y-7 animate-slide-in-left">
+            <div className="order-2 lg:order-1 lg:col-span-7 space-y-7 animate-slide-in-left">
               <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/25 bg-emerald-500/[0.06] px-3.5 py-1.5 text-xs font-semibold tracking-wide text-emerald-700">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-70" />
@@ -394,7 +394,7 @@ export default function Home() {
             </div>
 
             {/* Portrait */}
-            <div className="lg:col-span-5 flex justify-center relative animate-slide-in-right">
+            <div className="order-1 lg:order-2 lg:col-span-5 flex justify-center relative animate-slide-in-right pt-4 lg:pt-0">
               <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-[30px]">
                 <div className="absolute -inset-4 bg-gradient-to-tr from-primary to-emerald-500 rounded-[34px] opacity-20 blur-xl animate-pulse-slow -z-10" aria-hidden="true" />
                 <div className="w-full h-full rounded-[30px] overflow-hidden border-2 border-border shadow-2xl relative z-10 bg-muted">
