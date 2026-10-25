@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import {
   Mail, Phone, ArrowRight, ArrowUpRight, GraduationCap, Rocket,
   Cpu, CircuitBoard, Server, Calendar, MapPin, ExternalLink,
   Gauge, Wrench, Award, Building2, Sprout, Layers,
+  Database, Radio, HardDrive, Braces, Boxes,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -180,35 +181,50 @@ const education = [
  *  Each id resolves at https://ude.my/<id>.
  * ------------------------------------------------------------------ */
 
-const skills = [
+/* Order follows the CV: languages, software/tools, technologies, then data & cloud.
+   `icon` is a lucide fallback used when there is no brand logo, or if the CDN
+   image fails to load. */
+const skills: { name: string; logo?: string; icon?: Icon }[] = [
+  // Programming languages
   { name: 'C', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg' },
   { name: 'C++', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg' },
-  { name: 'C#', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg' },
-  { name: '.NET', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg' },
-  { name: 'Java', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' },
-  { name: 'Spring Boot', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg' },
   { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg' },
-  { name: 'FastAPI', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg' },
-  { name: 'Rust', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg' },
+  { name: 'Java', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg' },
+  { name: 'C#', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg' },
+  { name: 'SQL', icon: Database },
+  { name: 'Dart', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg' },
+
+  // Software & tools
   { name: 'MATLAB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg' },
   { name: 'Simulink', logo: 'custom-simulink' },
+  { name: 'KiCad', logo: 'https://cdn.simpleicons.org/kicad' },
+  { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
+  { name: 'Fusion 360', logo: 'https://cdn.simpleicons.org/autodesk/FF8200' },
+  { name: 'STM32CubeMX', icon: Cpu },
+  { name: 'STM32CubeIDE', icon: CircuitBoard },
+  { name: 'JetBrains IDEs', logo: 'https://cdn.simpleicons.org/jetbrains', icon: Braces },
+
+  // Technologies
   { name: 'Machine Learning', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg' },
-  { name: 'Deep Learning', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg' },
   { name: 'CMake', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cmake/cmake-original.svg' },
   { name: 'Makefile', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg' },
-  { name: 'KiCad', logo: 'https://cdn.simpleicons.org/kicad' },
-  { name: 'EasyEDA', logo: 'https://cdn.simpleicons.org/easyeda/00A4E4' },
-  { name: 'Fusion 360', logo: 'https://cdn.simpleicons.org/autodesk/FF8200' },
+  { name: 'Spring Boot', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg' },
+  { name: 'ASP.NET', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg' },
   { name: 'Flutter', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg' },
+  { name: 'Kafka', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg' },
+  { name: 'RabbitMQ', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg', icon: Radio },
+  { name: 'MQTT', logo: 'https://cdn.simpleicons.org/mqtt/660066', icon: Radio },
+
+  // Data & cloud
   { name: 'PostgreSQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg' },
+  { name: 'MySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg', icon: Database },
+  { name: 'MS SQL Server', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-plain.svg', icon: Database },
   { name: 'Redis', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg' },
   { name: 'Elasticsearch', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg' },
-  { name: 'Kibana', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kibana/kibana-original.svg' },
-  { name: 'Kafka', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg' },
-  { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
-  { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' },
+  { name: 'S3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg', icon: HardDrive },
+  { name: 'EC2', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg', icon: Server },
+  { name: 'AWS IoT', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg', icon: Radio },
   { name: 'Azure', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg' },
-  { name: 'AWS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
   { name: 'GCP', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg' },
 ];
 
@@ -301,7 +317,15 @@ export default function Home() {
     document.documentElement.classList.remove('dark');
   }, []);
 
-  const renderLogo = (logo: string) => {
+  const [brokenLogos, setBrokenLogos] = useState<Record<string, true>>({});
+
+  const renderLogo = (skill: { name: string; logo?: string; icon?: Icon }) => {
+    const { name, logo, icon: FallbackIcon = Boxes } = skill;
+
+    if (!logo || brokenLogos[name]) {
+      return <FallbackIcon className="w-5 h-5 shrink-0 text-muted-foreground" />;
+    }
+
     if (logo === 'custom-simulink') {
       return (
         <svg className="w-5 h-5 text-[#E05B2B] shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -312,7 +336,16 @@ export default function Home() {
         </svg>
       );
     }
-    return <img src={logo} alt="" loading="lazy" decoding="async" className="w-5 h-5 object-contain shrink-0" />;
+    return (
+      <img
+        src={logo}
+        alt=""
+        loading="lazy"
+        decoding="async"
+        onError={() => setBrokenLogos((prev) => ({ ...prev, [name]: true }))}
+        className="w-5 h-5 object-contain shrink-0"
+      />
+    );
   };
 
   return (
@@ -455,7 +488,7 @@ export default function Home() {
                     aria-hidden={index >= skills.length}
                     className="flex items-center gap-3 px-5 py-2.5 bg-card/40 backdrop-blur-sm hover:bg-card border border-border/40 hover:border-primary/30 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md cursor-default shrink-0"
                   >
-                    {renderLogo(skill.logo)}
+                    {renderLogo(skill)}
                     <span className="font-bold text-sm tracking-wide text-foreground/85">{skill.name}</span>
                   </div>
                 ))}
