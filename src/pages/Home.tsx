@@ -181,9 +181,10 @@ const education = [
  *  Each id resolves at https://ude.my/<id>.
  * ------------------------------------------------------------------ */
 
-/* Order follows the CV: languages, software/tools, technologies, then data & cloud.
-   `icon` is a lucide fallback used when there is no brand logo, or if the CDN
-   image fails to load. */
+/* Everything previously listed, plus the additions from the CV, grouped:
+   languages, software/tools, technologies, then data & cloud.
+   `icon` is a lucide fallback used when there is no brand logo, or if the
+   CDN image fails to load. */
 const skills: { name: string; logo?: string; icon?: Icon }[] = [
   // Programming languages
   { name: 'C', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg' },
@@ -193,23 +194,29 @@ const skills: { name: string; logo?: string; icon?: Icon }[] = [
   { name: 'C#', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg' },
   { name: 'SQL', icon: Database },
   { name: 'Dart', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg' },
+  // { name: 'Rust', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg' },
 
   // Software & tools
   { name: 'MATLAB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg' },
   { name: 'Simulink', logo: 'custom-simulink' },
   { name: 'KiCad', logo: 'https://cdn.simpleicons.org/kicad' },
-  { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
+  // { name: 'EasyEDA', logo: 'https://cdn.simpleicons.org/easyeda/00A4E4' },
   { name: 'Fusion 360', logo: 'https://cdn.simpleicons.org/autodesk/FF8200' },
   { name: 'STM32CubeMX', icon: Cpu },
   { name: 'STM32CubeIDE', icon: CircuitBoard },
   { name: 'JetBrains IDEs', logo: 'https://cdn.simpleicons.org/jetbrains', icon: Braces },
+  { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg' },
+  { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg' },
 
   // Technologies
   { name: 'Machine Learning', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg' },
+  { name: 'Deep Learning', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg' },
   { name: 'CMake', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cmake/cmake-original.svg' },
   { name: 'Makefile', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg' },
   { name: 'Spring Boot', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg' },
+  { name: '.NET', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg' },
   { name: 'ASP.NET', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg' },
+  { name: 'FastAPI', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg' },
   { name: 'Flutter', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg' },
   { name: 'Kafka', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg' },
   { name: 'RabbitMQ', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg', icon: Radio },
@@ -221,9 +228,11 @@ const skills: { name: string; logo?: string; icon?: Icon }[] = [
   { name: 'MS SQL Server', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-plain.svg', icon: Database },
   { name: 'Redis', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg' },
   { name: 'Elasticsearch', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg' },
+  { name: 'Kibana', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kibana/kibana-original.svg' },
   { name: 'S3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg', icon: HardDrive },
   { name: 'EC2', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg', icon: Server },
   { name: 'AWS IoT', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg', icon: Radio },
+  { name: 'AWS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
   { name: 'Azure', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg' },
   { name: 'GCP', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg' },
 ];

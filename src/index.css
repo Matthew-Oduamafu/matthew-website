@@ -244,7 +244,7 @@
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 45s linear infinite;
+  animation: marquee 53s linear infinite;
 }
 
 .animate-marquee:hover {
