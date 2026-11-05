@@ -1,4 +1,4 @@
-import { BrainCircuit, CircuitBoard, Server, Terminal, Wrench } from 'lucide-react';
+import { BrainCircuit, CircuitBoard, Factory, Server, Terminal, Wrench } from 'lucide-react';
 import type { AccentKey, Icon } from '@/lib/accents';
 
 /* ------------------------------------------------------------------ *
@@ -15,6 +15,7 @@ export type CertGroup =
   | 'Backend & Cloud'
   | 'Languages'
   | 'AI & Data'
+  | 'Manufacturing & Business'
   | 'Web & Tooling';
 
 export const certGroups: { key: CertGroup; icon: Icon; accent: AccentKey }[] = [
@@ -22,6 +23,7 @@ export const certGroups: { key: CertGroup; icon: Icon; accent: AccentKey }[] = [
   { key: 'Backend & Cloud', icon: Server, accent: 'violet' },
   { key: 'Languages', icon: Terminal, accent: 'blue' },
   { key: 'AI & Data', icon: BrainCircuit, accent: 'sky' },
+  { key: 'Manufacturing & Business', icon: Factory, accent: 'rose' },
   { key: 'Web & Tooling', icon: Wrench, accent: 'amber' },
 ];
 
@@ -74,6 +76,11 @@ export const certificates: {
   // AI & Data
   { title: 'Machine Learning', instructor: 'Andrew Ng · Stanford Online', date: 'Nov 2021', id: 'VKCBHXRCVTQD', issuer: 'Coursera', group: 'AI & Data' },
   { title: 'The Complete SQL Bootcamp: Go from Zero to Hero', instructor: 'Jose Portilla · Pierian Training', date: 'Jul 2024', hours: 9, id: 'UC-ff27870a-5b6f-44bb-817d-b922a2e203e6', issuer: 'Udemy', group: 'AI & Data' },
+
+  // Manufacturing & Business
+  { title: 'Manufacturing Process Selection and Design for Manufacturing', instructor: 'Mufaddal Rasheed', date: 'Nov 2026', hours: 4.5, id: 'UC-276f321e-d16b-4fdd-b707-a61da36ee318', issuer: 'Udemy', group: 'Manufacturing & Business' },
+  { title: 'Manufacturing Processes — Factory At Your Desk', instructor: 'BIZM Consulting', date: 'Nov 2026', hours: 3, id: 'UC-e1f57489-8a06-456b-9ef6-4c5fcbc08f1f', issuer: 'Udemy', group: 'Manufacturing & Business' },
+  { title: 'Investment Appraisal Mastery: NPV, IRR, Payback, PI, ARR', instructor: 'Fervent #LearnWithDistinction', date: 'Sep 2026', hours: 2.5, id: 'UC-a8159768-dd2f-4d49-a739-37933cfd9fbd', issuer: 'Udemy', group: 'Manufacturing & Business' },
 
   // Web & Tooling
   { title: 'Build Responsive Real-World Websites with HTML and CSS', instructor: 'Jonas Schmedtmann', date: 'Aug 2023', hours: 37.5, id: 'UC-0bcdb6d1-e21a-4658-b64f-555903d2ba07', issuer: 'Udemy', group: 'Web & Tooling' },

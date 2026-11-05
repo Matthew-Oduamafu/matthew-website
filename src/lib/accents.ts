@@ -1,7 +1,7 @@
 import type { ComponentType } from 'react';
 
 export type Icon = ComponentType<{ className?: string }>;
-export type AccentKey = 'blue' | 'emerald' | 'amber' | 'violet' | 'sky';
+export type AccentKey = 'blue' | 'emerald' | 'amber' | 'violet' | 'sky' | 'rose';
 
 /** Static class strings so Tailwind can see every variant at build time. */
 export const accents: Record<AccentKey, {
@@ -46,6 +46,14 @@ export const accents: Record<AccentKey, {
     dot: 'bg-sky-500',
     chip: 'bg-sky-500/[0.07] text-sky-700 ring-1 ring-sky-500/15',
     title: 'group-hover/card:text-sky-600',
+  },
+  rose: {
+    icon: 'bg-rose-500/10 text-rose-600',
+    bar: 'from-rose-500/80',
+    ring: 'hover:ring-rose-500/40',
+    dot: 'bg-rose-500',
+    chip: 'bg-rose-500/[0.07] text-rose-700 ring-1 ring-rose-500/15',
+    title: 'group-hover/card:text-rose-600',
   },
 };
 
