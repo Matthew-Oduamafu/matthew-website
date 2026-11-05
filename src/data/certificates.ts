@@ -40,6 +40,8 @@ export const certificates: {
 }[] = [
   // Embedded & Hardware
   { title: 'PCB Design with KiCad 9', instructor: 'Dr. Peter Dalmaris', date: 'Dec 2025', hours: 32, id: 'UC-44f5593c-d7d1-4dd6-8cef-8b2a901adeb0', issuer: 'Udemy', group: 'Embedded & Hardware' },
+  { title: 'Mastering Microcontroller: Timers, PWM, CAN, Low Power (MCU2)', instructor: 'Kiran Nayak · FastBit Embedded Brain Academy', date: 'Nov 2026', hours: 29, id: 'UC-9f5fa398-bf06-4201-bc00-fe28a02dc7e9', issuer: 'Udemy', group: 'Embedded & Hardware' },
+  { title: 'Mastering Microcontroller and Embedded Driver Development', instructor: 'Kiran Nayak · FastBit Embedded Brain Academy', date: 'Nov 2026', hours: 28.5, id: 'UC-3686e83a-a901-449c-bdea-f4908778ad14', issuer: 'Udemy', group: 'Embedded & Hardware' },
   { title: 'DSP From Ground Up on ARM Processors', instructor: 'Israel Gbati · BHM Engineering Academy', date: 'Apr 2026', hours: 25.5, id: 'UC-dc8125b6-5424-4334-9b70-873bfe917724', issuer: 'Udemy', group: 'Embedded & Hardware' },
   { title: 'The Complete Electronics Course: Analog Hardware Design', instructor: 'Hardware Academy', date: 'Apr 2026', hours: 24.5, id: 'UC-09493a39-8ce9-41bd-b3ea-ee936eb8bb1d', issuer: 'Udemy', group: 'Embedded & Hardware' },
   { title: 'FreeRTOS From Ground Up on ARM Processors', instructor: 'Israel Gbati · BHM Engineering Academy', date: 'Aug 2026', hours: 23.5, id: 'UC-5a3d8f79-db59-4d47-81b9-6200be6dc8ab', issuer: 'Udemy', group: 'Embedded & Hardware' },
